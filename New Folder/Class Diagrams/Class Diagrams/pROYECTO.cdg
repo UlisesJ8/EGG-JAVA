@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="pROYECTO">
+  <ClassDiagramComponents>
+    <Class name="Perro" package="" visibility="public" xPosition="181.0" yPosition="289.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="public"/>
+        <Field name="apodo" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="caminar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pulga" package="" visibility="public" xPosition="589.0" yPosition="289.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="pulgasPerrunas" source="Perro" target="Pulga" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

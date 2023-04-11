@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejemplos.agregacion">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="ejemplos.agregacion" visibility="public" xPosition="174.0" yPosition="151.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Empresa" package="ejemplos.agregacion" visibility="public" xPosition="446.0" yPosition="202.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

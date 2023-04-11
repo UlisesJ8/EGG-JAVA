@@ -1,0 +1,3 @@
+ejemplodelinkedlist.MyClass
+ejemplodelinkedlist.Nodo
+ejemplodelinkedlist.listaDoble

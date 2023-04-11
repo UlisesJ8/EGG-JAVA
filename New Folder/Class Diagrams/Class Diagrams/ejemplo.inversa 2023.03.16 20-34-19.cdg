@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejemplo.inversa">
+  <ClassDiagramComponents>
+    <Class name="Auto" package="ejemplo.inversa" visibility="public" xPosition="1040.0" yPosition="197.0">
+      <Fields>
+        <Field name="propietario" type="Persona" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Persona" package="ejemplo.inversa" visibility="public" xPosition="381.0" yPosition="197.0">
+      <Fields>
+        <Field name="autos" type="List&lt;Auto&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="propietario" source="ejemplo.inversa.Auto" target="ejemplo.inversa.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="autos" source="ejemplo.inversa.Persona" target="ejemplo.inversa.Auto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Auto&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejemplo.reflexiva">
+  <ClassDiagramComponents>
+    <Class name="Persona" package="ejemplo.reflexiva" visibility="public" xPosition="197.0" yPosition="150.0">
+      <Fields>
+        <Field name="amigos" type="List&lt;Persona&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="amigos" source="ejemplo.reflexiva.Persona" target="ejemplo.reflexiva.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Persona&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

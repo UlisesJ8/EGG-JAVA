@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Entidad">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="Entidad" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombreCompleto" type="String" visibility="private"/>
+        <Field name="DNI" type="int" visibility="private"/>
+        <Field name="cantidadVotos" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombreCompleto"/>
+          <Argument type="int" name="DNI"/>
+          <Argument type="int" name="cantidadVotos"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombreCompleto"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="DNI"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNombreCompleto" returnType="String" visibility="public"/>
+        <Method name="setNombreCompleto" returnType="void" visibility="public">
+          <Argument type="String" name="nombreCompleto"/>
+        </Method>
+        <Method name="getDNI" returnType="int" visibility="public"/>
+        <Method name="setDNI" returnType="void" visibility="public">
+          <Argument type="int" name="DNI"/>
+        </Method>
+        <Method name="getCantidadVotos" returnType="int" visibility="public"/>
+        <Method name="setCantidadVotos" returnType="void" visibility="public">
+          <Argument type="int" name="cantidadVotos"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Simulador" package="Entidad" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="alum" type="ArrayList&lt;Alumno&gt;" visibility="package"/>
+        <Field name="reader" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Alumno&gt;" name="alum"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="llenarAleatorio" returnType="void" visibility="public"/>
+        <Method name="generarDNI" returnType="void" visibility="public"/>
+        <Method name="imprimirAlumnos" returnType="void" visibility="public"/>
+        <Method name="getAlum" returnType="ArrayList&lt;Alumno&gt;" visibility="public"/>
+        <Method name="setAlum" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Alumno&gt;" name="alum"/>
+        </Method>
+        <Method name="getReader" returnType="Scanner" visibility="public"/>
+        <Method name="setReader" returnType="void" visibility="public">
+          <Argument type="Scanner" name="reader"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Voto" package="Entidad" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="alum" type="Alumno" visibility="package"/>
+        <Field name="lista" type="ArrayList&lt;Alumno&gt;" visibility="package"/>
+        <Field name="votados" type="HashSet&lt;String&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Alumno" name="alum"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="votacion" returnType="void" visibility="public"/>
+        <Method name="mostrarAlum" returnType="void" visibility="public"/>
+        <Method name="recuentoVotos" returnType="void" visibility="public"/>
+        <Method name="facilitadores" returnType="void" visibility="public"/>
+        <Method name="getAlum" returnType="Alumno" visibility="public"/>
+        <Method name="setAlum" returnType="void" visibility="public">
+          <Argument type="Alumno" name="alum"/>
+        </Method>
+        <Method name="getLista" returnType="ArrayList&lt;Alumno&gt;" visibility="public"/>
+        <Method name="setLista" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Alumno&gt;" name="lista"/>
+        </Method>
+        <Method name="getVotados" returnType="HashSet&lt;String&gt;" visibility="public"/>
+        <Method name="setVotados" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;String&gt;" name="votados"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="alum" source="Entidad.Voto" target="Entidad.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="alum" source="Entidad.Simulador" target="Entidad.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Alumno&gt;"/>
+    <HasRelation name="lista" source="Entidad.Voto" target="Entidad.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Alumno&gt;"/>
+    <UseRelation source="Entidad.Voto" target="Entidad.Alumno" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidad.Simulador" target="Entidad.Alumno" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

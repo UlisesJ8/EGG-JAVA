@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="RelacionesPrj03">
+  <ClassDiagramComponents>
+    <Class name="barajaCartas" package="Entidad" visibility="public" xPosition="26.0" yPosition="30.0">
+      <Fields>
+        <Field name="barajaInicial" type="ArrayList&lt;Carta&gt;" visibility="private"/>
+        <Field name="barajaNueva" type="ArrayList&lt;Carta&gt;" visibility="private"/>
+        <Field name="reader" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="barajar" returnType="void" visibility="public"/>
+        <Method name="siguienteCarta" returnType="void" visibility="public"/>
+        <Method name="cartasDisponibles" returnType="void" visibility="public"/>
+        <Method name="darCartas" returnType="void" visibility="public"/>
+        <Method name="cartasMonton" returnType="void" visibility="public"/>
+        <Method name="mostrarBaraja" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Carta" package="Entidad" visibility="public" xPosition="357.0" yPosition="39.0">
+      <Fields>
+        <Field name="palo" type="String" visibility="private"/>
+        <Field name="numero" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="palo"/>
+          <Argument type="String" name="numero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPalo" returnType="String" visibility="public"/>
+        <Method name="setPalo" returnType="void" visibility="public">
+          <Argument type="String" name="palo"/>
+        </Method>
+        <Method name="getNumero" returnType="String" visibility="public"/>
+        <Method name="setNumero" returnType="void" visibility="public">
+          <Argument type="String" name="numero"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RelacionesPrj03" package="relacionesprj03" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="numeros" package="Enumeraciones" visibility="public" xPosition="668.0" yPosition="76.0">
+      <Literals>
+        <Literal name="UNO"/>
+        <Literal name="DOS"/>
+        <Literal name="TRES"/>
+        <Literal name="CUATRO"/>
+        <Literal name="CINCO"/>
+        <Literal name="SEIS"/>
+        <Literal name="SIETE"/>
+        <Literal name="DIEZ"/>
+        <Literal name="ONCE"/>
+        <Literal name="DOCE"/>
+      </Literals>
+    </Enum>
+    <Enum name="palo" package="Enumeraciones" visibility="public" xPosition="908.0" yPosition="122.0">
+      <Literals>
+        <Literal name="ESPADA"/>
+        <Literal name="BASTO"/>
+        <Literal name="ORO"/>
+        <Literal name="COPA"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="barajaNueva" source="Entidad.barajaCartas" target="Entidad.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Carta&gt;"/>
+    <HasRelation name="barajaInicial" source="Entidad.barajaCartas" target="Entidad.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Carta&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
