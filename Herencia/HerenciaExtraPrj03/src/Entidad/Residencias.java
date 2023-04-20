@@ -69,7 +69,7 @@ public class Residencias extends AlojamientoExtrahotelero{
 
     @Override
     public String toString() {
-        return "Residencias{" + "cantidadHabitaciones=" + cantidadHabitaciones + ", descuentoGremio=" + descuentoGremio + ", campoDeportivo=" + campoDeportivo + '}';
+        return "Residencias: "+ "privacidad = " + privacidad + ", mtsCuadrados = " + mtsCuadrados +  ", cantidadHabitaciones = " + cantidadHabitaciones + ", descuentoGremio = " + descuentoGremio + ", campoDeportivo = " + campoDeportivo;
     }
     
     

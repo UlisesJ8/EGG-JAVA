@@ -86,7 +86,7 @@ public class Hotel5 extends Hotel4{
 
     @Override
     public String toString() {
-        return "Hotel5{" + "cantidadSalonesConfe=" + cantidadSalonesConfe + ", cantidadSuites=" + cantidadSuites + ", cantidadLimosinas=" + cantidadLimosinas + '}';
+        return "Hotel5: " + " cantidadHabitaciones = " + cantidadHabitaciones + ", numeroDeCamas = " + numeroDeCamas + ", cantidadPisos = " + cantidadPisos + ", precioHabitacion = " + precioHabitacion + ", cantidadSalonesConfe = " + cantidadSalonesConfe + ", cantidadSuites = " + cantidadSuites + ", cantidadLimosinas = " + cantidadLimosinas;
     }
     
     

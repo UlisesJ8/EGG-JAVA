@@ -65,7 +65,7 @@ public class Camping extends AlojamientoExtrahotelero{
 
     @Override
     public String toString() {
-        return "Camping{" + "capacidadCarpas=" + capacidadCarpas + ", cantidadBanios=" + cantidadBanios + ", restaurante=" + restaurante + '}';
+        return "Camping:" + " privacidad = " + privacidad + ", mtsCuadrados=" + mtsCuadrados + ", capacidadCarpas = " + capacidadCarpas + ", cantidadBanios = " + cantidadBanios + ", restaurante = " + restaurante;
     }
 
   

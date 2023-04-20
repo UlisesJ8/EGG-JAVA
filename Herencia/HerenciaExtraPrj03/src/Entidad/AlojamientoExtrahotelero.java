@@ -35,5 +35,10 @@ public class AlojamientoExtrahotelero {
     public void setMtsCuadrados(double mtsCuadrados) {
         this.mtsCuadrados = mtsCuadrados;
     }
+
+    @Override
+    public String toString() {
+        return "AlojamientoExtrahotelero{" + "privacidad=" + privacidad + ", mtsCuadrados=" + mtsCuadrados + '}';
+    }
     
 }

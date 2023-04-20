@@ -21,6 +21,7 @@ public class servicioCompania {
     Scanner reader = new Scanner(System.in);
 
     private Hoteles crearHotel() {
+        
         System.out.println("Ingrese la cantidad de pisos del hotel: ");
         int cantidadPisos = reader.nextInt();
         System.out.println("Ingrese la cantidad de habitaciones del hotel: ");
@@ -33,9 +34,10 @@ public class servicioCompania {
     }
 
     private AlojamientoExtrahotelero crearExtra() {
+        
         String op = "";
         do {
-            System.out.println("Es pivado o no (si/no)? ");
+            System.out.println("Es privado o no (si/no)? ");
             op = reader.next();
         } while (!op.equalsIgnoreCase("no") && !op.equalsIgnoreCase("si"));
 
@@ -92,6 +94,7 @@ public class servicioCompania {
     }
     
     public Camping crearCamping(){
+        System.out.println("Creando CAMPING");
     AlojamientoExtrahotelero aloja = crearExtra();
         System.out.println("Ingrese la capacidad maxima de carpas");
         int carpas = reader.nextInt();
@@ -100,9 +103,10 @@ public class servicioCompania {
         boolean restaurante = true;
         String op = "";
         do{
+            reader.nextLine();
             System.out.println("Hay restaurante en el camping? (si/no)");
             op = reader.nextLine();
-        }while(!op.equalsIgnoreCase("si") && !op.equalsIgnoreCase("si"));
+        }while(!op.equalsIgnoreCase("si") && !op.equalsIgnoreCase("no"));
         
         if(op.equalsIgnoreCase("si")){
         restaurante = true;
@@ -115,23 +119,40 @@ public class servicioCompania {
     }
     
     
-    public Residencia crearResidencia(){
+    public Residencias crearResidencia(){
+        System.out.println("Creando RESIDENCIA:");
     AlojamientoExtrahotelero alojamiento = crearExtra();
         System.out.println("Ingrese la cantidad de habitaciones de la residencia: ");
         int cantidadHab = reader.nextInt();
         boolean gremio = true;
         String op = "";
         do{
+            reader.nextLine();
             System.out.println("Se hacen descuentos a gremios? (si/no)");
             op = reader.nextLine();
         }while(!op.equalsIgnoreCase("si") && !op.equalsIgnoreCase("no"));
-        if (op.equalsIgnoreCase(op)) {
-            
+        
+        if (op.equalsIgnoreCase("si")) {
+            gremio= true;
         } else {
+            gremio = false;
+        }
+        boolean campoDeportivo = true;
+        String op1 = "";
+        do{
+            System.out.println("Posee campo deportivo? (si/no)");
+            op1 = reader.nextLine();
+        }while(!op1.equalsIgnoreCase("si") && !op1.equalsIgnoreCase("no"));
+        
+        if (op1.equalsIgnoreCase("si")) {
+            campoDeportivo = true;
+        } else {
+            campoDeportivo = false;
         }
         
-    AlojamientoExtrahotelero residencia = new Residencias(0, true, true, alojamiento.getPrivacidad(), alojamiento.getMtsCuadrados());
-    return residencia;
+        
+    AlojamientoExtrahotelero residencia = new Residencias(cantidadHab, gremio, campoDeportivo, alojamiento.getPrivacidad(), alojamiento.getMtsCuadrados());
+    return (Residencias) residencia;
     }
     
     

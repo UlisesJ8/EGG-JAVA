@@ -25,8 +25,6 @@ public class Hoteles {
         this.precioHabitacion = precioHabitacion;
     }
 
-    
-    
     public int getCantidadHabitaciones() {
         return cantidadHabitaciones;
     }
@@ -58,6 +56,11 @@ public class Hoteles {
     public void setPrecioHabitacion(double precioHabitacion) {
         this.precioHabitacion = precioHabitacion;
     }
+
+    public int compare(Hoteles h, Hoteles h2) {
+            return Double.compare(h.getPrecioHabitacion(), h2.getPrecioHabitacion());
+            
+        }
 
     @Override
     public String toString() {
